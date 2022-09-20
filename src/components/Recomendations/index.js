@@ -6,6 +6,8 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 
 import './index.css'
@@ -42,7 +44,6 @@ const Recomendations = () => {
                             <div className='flex-row image-items'>
                                 <div>
                                     <TipsAndUpdatesSharpIcon className="image-2" sx={{ fontSize: 50 }} />
-                                    {/* <img className='image-2' src="https://media.istockphoto.com/vectors/light-bulb-sketch-of-an-electric-device-cartoon-doodle-lighting-and-vector-id1301904956?s=612x612" alt="img" /> */}
                                     <p>It's AI-ML thing</p>
                                 </div>
                                 <div className='items'>
@@ -57,9 +58,17 @@ const Recomendations = () => {
                                 </div>
                             </div>
                             <p className='savings'>Savings of $40,000</p>
-                            <div>
-                                <Link to="/"><button className='reject-button'>Reject</button></Link>
-                                <Link to="/success"><button className='accept-button'>Accept</button></Link>
+                            <div className='buttons'>
+                                <Link to="/">
+                                    <button className='reject-button'>
+                                        <CancelIcon></CancelIcon>
+                                    </button>
+                                </Link>
+                                <Link to="/success">
+                                    <button className='accept-button'>
+                                        <CheckCircleOutlineIcon></CheckCircleOutlineIcon>
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </TabPanel>

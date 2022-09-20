@@ -58,6 +58,11 @@
     margin-top: 20px;
     height:20px
 }
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+}
 .accept-button{
     background-color: green;
     color:white;
@@ -65,7 +70,6 @@
     border: 0px;
     border-radius: 10px;
     cursor: pointer;
-    margin: 5px;
 }
 .reject-button{
     background-color: red;
@@ -74,9 +78,5 @@
     border: 0px;
     border-radius: 10px;
     cursor: pointer;
-    margin: 5px;
 
 }
-/* .slider{
-    width: 80vw;
-} */

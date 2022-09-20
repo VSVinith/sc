@@ -2,10 +2,9 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   background-image: url("https://img.freepik.com/premium-photo/warehouse-goods-stock-background-3d-rendering_110893-61.jpg?w=1480");
    justify-content: center;
    min-height: 100vh;
-   background-image: url("https://img.freepik.com/premium-photo/warehouse-goods-stock-background-3d-rendering_110893-61.jpg?w=1480");
-   /* background-image: radial-gradient(silver, rgb(113, 107, 107)); */
    background-size: cover;
    font-family: Arial;
    overflow-y: scroll;
@@ -13,14 +12,17 @@
 .card{
     display: flex;
     margin:10px;
-    height: 130px;
+    height: 150px;
     width:320px;
+    padding: 10px;
+    text-align: left;
     background-color: white;
     border-radius: 8px;
     justify-content: space-around;
 }
 
 .otif{
+    text-align: right;
     width: 120px;
 }
 .recomendations{
@@ -71,5 +73,33 @@
     margin-top: 20px;
 }
 .hide-button{
+    display: none;
+}
+.no-solutions-2{
+    display: none;
+}
+.display-solutions-2{
+    display:block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to bottom, rgb(165, 215, 27), silver);
+    border-radius: 10px;
+}
+.solutions-button-2{
+    color: black;
+    border: 0px;
+    cursor: pointer;
+}
+.show-solutions-button-2{
+    display: block;
+}
+.hide-solutions-button-2{
+    display: none;
+}
+.show-button-2{
+    display: block;
+    margin-top: 20px;
+}
+.hide-button-2{
     display: none;
 }
