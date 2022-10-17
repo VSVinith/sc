@@ -20,6 +20,13 @@ const Recomendations = () => {
         setValue(newValue);
     }
 
+    const [savings, setSavings] = React.useState("")
+
+    const handleSavings = (event) => {
+        if(event.target.value === "macy"){setSavings("40,000")}
+        else if(event.target.value === "lowe"){setSavings("20,000")}
+    }
+
     return (
         <div>
             <Box sx={{ width: '100%', typography: 'body1' }}>
@@ -48,16 +55,16 @@ const Recomendations = () => {
                                 </div>
                                 <div className='items'>
                                     <div className='item'>
-                                        <input type="checkbox" id="macy"></input>
+                                        <input type="radio" id="macy" value="macy" name="allocation" onChange={handleSavings}></input>
                                         <label htmlFor='macy'> Item1: Allocation Movement of 100 from Macy's to Walmart</label>
                                     </div>
                                     <div className='item'>
-                                        <input type="checkbox" id="lowe"></input>
+                                        <input type="radio" id="lowe" value="lowe" onChange={handleSavings} name="allocation"></input>
                                         <label htmlFor='lowe'> Item2: Allocation Movement of 200 from Lowe's to Walmart</label>
                                     </div>
                                 </div>
                             </div>
-                            <p className='savings'>Savings of $40,000</p>
+                            <p className='savings'>Savings of {savings} </p>
                             <div className='buttons'>
                                 <Link to="/">
                                     <button className='reject-button'>
