@@ -3,14 +3,30 @@ import { Link } from 'react-router-dom'
 
 import './index.css'
 
-// const issues = [
-//     {
-//         id: 1,
-//         issue: "Inaccurate Invetory",
-//         issueOtif: "20%",
+const data = {
+    ImpactedOrders : {
 
-//     }
-// ]
+        ORDER_ID: [
+
+            "ATPDOCNUM2",
+
+            "ATPDOCNUM",
+
+            "UI-15601",
+
+            "UI-15603",
+
+            "Order1"
+
+        ]
+
+    },
+
+    ImpactedOrderCount : "5"
+
+}
+
+const { ImpactedOrderCount } = data
 
 class Cards extends Component {
 
@@ -20,7 +36,7 @@ class Cards extends Component {
         solutionsButton: "show-solutions-button",
         solutionsDisplay2: "no-solutions-2", 
         hideButton2: "hide-button-2", 
-        solutionsButton2: "show-solutions-button-2"
+        solutionsButton2: "show-solutions-button-2",
     }
 
     onClickSolutions = () => {
@@ -39,6 +55,25 @@ class Cards extends Component {
         this.setState({ solutionsDisplay2: "no-solutions-2", hideButton2: "hide-button-2", solutionsButton2: "show-solutions-button-2" })
     }
 
+    // componentDidMount(){
+    //     this.getData()
+        
+    // }
+
+    // getData = async () => {
+    //     const api = "http://localhost:8001/jda/SCPOWeb-orderpromiser/op/integration/v1/getImpactedOrders"
+    //     const options = {
+    //         method: "GET"
+    //     }
+
+    //     const response = await fetch(api, options)
+
+    //     const data = await response.json()
+    //     const { ImpactedOrderCount } = data
+
+
+    // }
+
     render() {
         const { solutionsDisplay, hideButton, solutionsButton, solutionsDisplay2, hideButton2, solutionsButton2 } = this.state
         return (
@@ -47,6 +82,7 @@ class Cards extends Component {
                     <div className="card ">
                         <div className="recomendations">
                             <p className="recomendation">Inaccurate Inventory</p>
+                            <p className=''>Impacted Order Count: {ImpactedOrderCount}</p>
                             <div class="buttons">
                                 <button className={solutionsButton} onClick={this.onClickSolutions}> Show Solutions</button>
                                 <button className={hideButton} onClick={this.onClickHideSolutions}>Hide Solutions</button>
@@ -96,6 +132,7 @@ class Cards extends Component {
                     <div className="card ">
                         <div className="recomendations">
                             <p className="recomendation">Inaccurate Inventory</p>
+                            <p className=''>Impacted Order Count: {ImpactedOrderCount}</p>
                             <div class="buttons">
                                 <button className={solutionsButton2} onClick={this.onClickSolutions2}> Show Solutions</button>
                                 <button className={hideButton2} onClick={this.onClickHideSolutions2}>Hide Solutions</button>
