@@ -185,7 +185,7 @@ const data = {
                         PromDate: "18-Nov-22",
                         NewPromDate: "",
                         Seller: "S14",
-                        NewPromQtyColor: "green",
+                        NewPromQtyColor: "red",
                         NewPromDateColor: "red"
 
 
@@ -296,7 +296,7 @@ const data = {
                         PromDate: "17-Nov-22",
                         NewPromDate: "",
                         Seller: "S12",
-                        NewPromQtyColor: "green",
+                        NewPromQtyColor: "red",
                         NewPromDateColor: "red"
                     },
                     {
@@ -324,7 +324,7 @@ const data = {
                         PromDate: "18-Nov-22",
                         NewPromDate: "17-Nov-22",
                         Seller: "S13",
-                        NewPromQtyColor: "red",
+                        NewPromQtyColor: "green",
                         NewPromDateColor: "green"
                     },
                     {
